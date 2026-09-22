@@ -14,6 +14,15 @@ This repo is under active construction as part of a structured MTech in AI & ML 
 - [ ] **Deep RL agent (DQN/PPO)** — Trained on Gymnasium environments (CartPole → LunarLander → a harder Atari environment), with training curves and failure-mode analysis documented honestly.
 - [ ] **Classical ML pipeline with proper experiment tracking** — Full EDA → feature engineering → model comparison → MLflow/W&B tracking → served via a simple API.
 
+## Robotics + Multimodal AI (Sem 3 electives)
+
+Robotics and Multimodal AI live here rather than in a separate repo — both are application areas that build directly on the Deep Learning and Deep RL work above, not separate technical disciplines. Keeping them in one place makes the connections between them visible instead of scattering related work across repos.
+
+- [ ] **RL for robotic control** — a Deep RL agent (building on the DQN/PPO project above) applied to a robotics-flavored Gymnasium environment (e.g. a manipulation or continuous-control task), with sim-to-real considerations documented even if only simulated.
+- [ ] **Multimodal representation learning** — a small CLIP-style joint embedding experiment: aligning image and text embeddings on a modest dataset, evaluated via cross-modal retrieval.
+- [ ] **Vision-language-action demo (flagship for this pair)** — a scaled-down embodied-AI demo in the spirit of PaLM-E/RT-2: fusing a vision-language model's output with a simple control policy, even in a toy simulated environment. This is the project that visibly ties Robotics + Multimodal AI + Deep RL together.
+- [ ] **(Stretch) Quantum-enhanced encoder swap** — once `quantum-ml` has a working VQC, swap one component of the vision-language-action demo for a quantum-enhanced encoder and benchmark against the classical version — the single project that touches all three portfolio lanes at once.
+
 ## Why from-scratch implementations
 
 Being able to use `sklearn` or `torch.nn` doesn't tell you (or anyone reviewing this) whether you understand *why* something works. Each project here that says "from scratch" means the core math is implemented directly — backprop, gradient computation, the training loop — with a framework version alongside for comparison and validation.
